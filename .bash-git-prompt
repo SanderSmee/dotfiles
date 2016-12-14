@@ -1,0 +1,5 @@
+# use bash-git-prompt from: https://github.com/magicmonty/bash-git-prompt
+# brew info bash-git-prompt
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
