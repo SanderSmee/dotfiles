@@ -1,0 +1,13 @@
+# If applied, this commit will... (50-character subject line (69-character hard limit))
+
+
+# Explain why this change is being made (72-character wrapped longer description)
+# 1. Why is this change necessary?
+# 2. How does it address the issue?
+# 3. What side effects does this change have?
+
+
+# Provide links to any relevant tickets, articles or other resources
+# Resolves:
+# Relates:
+# Sample at: https://github.com/sparkbox/standard/tree/master/style/git

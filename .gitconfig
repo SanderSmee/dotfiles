@@ -24,6 +24,9 @@
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
+	# Do something for each git repo in folder (https://stackoverflow.com/questions/3497123/run-git-pull-over-all-subdirectories)
+	all = !"f(){ find . -type d -depth 1 | xargs -P5 -I{} git -C {} $1; }; f"
+
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
 	branches = branch -a
@@ -76,10 +79,25 @@
 		fi \
 	}; f"
 
+
+	# common abbreviations
+	ci = commit
+	co = checkout
+	b = branch -avv
+	lg = "log --pretty=format:'%Cblue%h%Creset %C(white)%G?%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative"
+
+	undo = reset --soft --keep HEAD^
+	wipe = !git reset --hard;git clean -fd
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
+
+
+[branch]
+	# always use --rebase with git pull
+	autosetuprebase = always
 
 [core]
 
@@ -99,6 +117,10 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
+
+	editor = vim
+	pager = less -X
+	autocrlf = input
 
 [color]
 
@@ -129,6 +151,7 @@
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true
+	template = ~/.gitmessage.txt
 
 [diff]
 
@@ -149,13 +172,19 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	ff = false
+
+[pull]
+
+	# rebase by default
+	rebase = true
 
 [push]
 
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
