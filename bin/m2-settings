@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# from: http://leshazlewood.com/2016/03/24/switching-maven-settings-xml-by-name/
+# gist: https://gist.github.com/lhazlewood/0ffbbb6d3d043c147710
+LINK_FILE="$HOME/.m2/settings.xml"
+
+if [ ! -L "$LINK_FILE" ]; then
+  echo "This program expects $LINK_FILE to be a symbolic link."
+  exit 1
+fi
+
+if [ -z "$1" ]; then
+  ls -lah "$LINK_FILE"
+  #out=$(ls -alh "$LINK_FILE")
+  #echo "$out"
+  exit 0
+fi
+
+TARGET_FILE="$HOME/.m2/$1.settings.xml"
+
+if [ ! -f "$TARGET_FILE" ]; then
+  echo "$TARGET_FILE does not exist."
+  exit 1
+fi
+
+ln -sf "$TARGET_FILE" "$LINK_FILE"
+
+ls -lah "$LINK_FILE"
