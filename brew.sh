@@ -47,20 +47,14 @@ brew install dark-mode
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
-brew install lua
-brew install lynx
 brew install p7zip
 brew install pigz
 brew install pv
 brew install rename
-brew install rhino
-brew install speedtest_cli
 brew install ssh-copy-id
 brew install testssl
 brew install tree
 brew install vbindiff
-brew install webkit2png
-brew install zopfli
 
 # Install fullstack tools
 brew install bash-git-prompt
@@ -71,40 +65,37 @@ brew install gnupg2
 brew install gpg-agent
 brew install jenv
 brew install maven
-brew install maven-completion
+brew install homebrew/completions/maven-completion
 brew install node4-lts
 brew install openssl
 
 # Other tools
-brew install exiftool
-brew install jasper
+# brew install exiftool
+# brew install jasper
 
 # Macos apps
 brew tap caskroom/cask
-brew install caskroom/cask/atom
-brew install caskroom/cask/dropbox
-# brew install caskroom/cask/duet
-brew install caskroom/cask/flux
-brew install caskroom/cask/franz
-brew install caskroom/cask/google-chrome
-brew install caskroom/cask/growl
-brew install caskroom/cask/intellij-idea
-brew install caskroom/cask/istat-menu
-brew install caskroom/cask/iterm2
-brew install caskroom/cask/java
-# brew install caskroom/cask/java-7
-brew install caskroom/cask/sourcetree
-brew install caskroom/cask/tunnelblick
-# brew install caskroom/cask/virtualbox
+brew cask install atom
+brew cask install dropbox
+# brew cask install duet
+brew cask install flux
+brew cask install franz
+brew cask install gitkraken
+brew cask install google-chrome
+brew cask install gpgtools
+# brew cask install growlnotify
+brew cask install intellij-idea
+brew cask install istat-menus
+brew cask install iterm2
+brew cask install java
+# brew install caskroom/versions/java-7
+# brew cask install sourcetree
+# brew cask install tunnelblick
+# brew cask install virtualbox
 
 # Macos quicklook plugins
-brew install caskroom/cask/qlcolorcode
-brew install caskroom/cask/ttscoff-mmd-quicklook
-brew install caskroom/cask/
-brew install caskroom/cask/
-brew install caskroom/cask/
-brew install caskroom/cask/
-brew install caskroom/cask/
+brew cask install qlcolorcode
+brew cask install qlmarkdown
 
 # Remove outdated versions from the cellar.
 brew cleanup
