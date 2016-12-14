@@ -34,50 +34,11 @@ fi;
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
 # Install more recent versions of some macOS tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
-
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
 
 # Install other useful binaries.
 brew install ack
@@ -100,6 +61,50 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+
+# Install fullstack tools
+brew install bash-git-prompt
+brew install curl
+brew install git-extras
+brew install git-flow-avh
+brew install gnupg2
+brew install gpg-agent
+brew install jenv
+brew install maven
+brew install maven-completion
+brew install node4-lts
+brew install openssl
+
+# Other tools
+brew install exiftool
+brew install jasper
+
+# Macos apps
+brew tap caskroom/cask
+brew install caskroom/cask/atom
+brew install caskroom/cask/dropbox
+# brew install caskroom/cask/duet
+brew install caskroom/cask/flux
+brew install caskroom/cask/franz
+brew install caskroom/cask/google-chrome
+brew install caskroom/cask/growl
+brew install caskroom/cask/intellij-idea
+brew install caskroom/cask/istat-menu
+brew install caskroom/cask/iterm2
+brew install caskroom/cask/java
+# brew install caskroom/cask/java-7
+brew install caskroom/cask/sourcetree
+brew install caskroom/cask/tunnelblick
+# brew install caskroom/cask/virtualbox
+
+# Macos quicklook plugins
+brew install caskroom/cask/qlcolorcode
+brew install caskroom/cask/ttscoff-mmd-quicklook
+brew install caskroom/cask/
+brew install caskroom/cask/
+brew install caskroom/cask/
+brew install caskroom/cask/
+brew install caskroom/cask/
 
 # Remove outdated versions from the cellar.
 brew cleanup
