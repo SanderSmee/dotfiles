@@ -73,9 +73,16 @@ brew install openssl
 # brew install exiftool
 # brew install jasper
 
-# Macos apps
 brew tap caskroom/cask
+
+# Security
+brew cask install oversight
+brew cask install lockdown
+brew cask install blockblock
+
+# Macos apps
 brew cask install atom
+brew cask install bettertouchtool
 brew cask install dropbox
 # brew cask install duet
 brew cask install flux
@@ -90,8 +97,8 @@ brew cask install iterm2
 brew cask install java
 # brew install caskroom/versions/java-7
 # brew cask install sourcetree
-# brew cask install tunnelblick
-# brew cask install virtualbox
+brew cask install tunnelblick
+brew cask install virtualbox
 
 # Macos quicklook plugins
 brew cask install qlcolorcode
