@@ -118,6 +118,9 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 
+	# Do not ignore the file mode of files.
+	fileMode = false
+
 	editor = vim
 	pager = less -X
 	autocrlf = input
